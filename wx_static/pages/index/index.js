@@ -8,7 +8,6 @@ Page({
   },
 
   onLoad (query) {
-    //读取小程序缓存到本地的文件列表  
     const manager = wx.getFileSystemManager();  //获取全局唯一的文件管理器
     this.getLocalFiles(manager, this)
   },
@@ -26,14 +25,12 @@ Page({
             sel:false,
           })
         })
-
         $this.setData({
           downloadFile,
         })
-
       },
       fail: (err) => {
-        console.log('本地文件列表读取失败: ')
+        console.log('本地文件列表读取失败: ',err)
       }
     })
   },
@@ -122,9 +119,7 @@ Page({
         })
         return;
     }
-
     let $this = this;
-   
     wx.uploadFile({
       url: serverAddress.url + '/upload', // 请求服务端文件,
       filePath: upfilelist[fileindex].path,
@@ -136,13 +131,11 @@ Page({
       success: function (res) {
         let data = JSON.parse(res.data)
         if(data.code == 1){
-          //获取服务器端文件列表
           console.log('上传成功')
         }
       },
       fail: function (res) {
         console.log(res, " :失败res")
-
       },
       complete:function(res){
         if (fileindex == upfilelist.length -1){
@@ -173,3 +166,4 @@ Page({
   }
 
 });
+
