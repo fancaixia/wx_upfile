@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/main/index",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "文件下载",
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#405f80",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

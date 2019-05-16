@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+ <view class='tit' wx:if="{{defaultfiles.length>0}}">服务端文件,  点击可下载: </view>
+ <view class='defaultfile'>
+        <view wx:for="{{defaultfiles}}" wx:key="index" wx:for-item="item">
+          <view class="fileText" data-name="{{item}}" bindtap='savefiles'>{{item}}       </view>
+        </view>
+ </view>  
+
+  <view class='downloadbox'>
+      <view wx:if="{{downloadFile.length>0}}">下载到本地的文件列表: </view>
+      <view wx:for="{{downloadFile}}" wx:key="index" wx:for-item="item">
+          <view class='download'><text data-path="{{item.path}}" bindtap='openfile'>{{item.file}}</text></view>
+      </view>
+  </view>
+
+  <view class='martop60'>
+  <text class='default_btn' bindtap='gotoindex'>跳转到文件上传页面</text>
+  </view>
+
+</view>
+
+  

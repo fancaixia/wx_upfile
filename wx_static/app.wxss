@@ -1,0 +1,50 @@
+/* reset */
+.container {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+}
+.defaultfile{
+  margin-top: 20rpx;
+}
+.fileText {
+  margin-bottom: 20rpx;
+  color: rgba(102, 153, 255, 1);
+  text-decoration:underline;
+}
+.downloadbox{
+  margin-top: 40rpx;
+  font-size: 28rpx;
+}
+.download{
+  text-decoration:underline;
+  line-height: 60rpx;
+  position:relative;
+}
+.martop60{
+  margin-top: 60rpx;
+}
+.default_btn{
+  padding:6rpx 50rpx;
+  border-radius:36rpx;
+  border:1px solid #c7c7c7;
+  text-align:center;
+  background:#007fd0;
+  color:#fff;
+}
+.radio_view{
+  width: 150rpx;
+  height: 36rpx;
+  position: absolute;
+  top:0;
+  right: 36rpx;
+}
+.radio_view image{
+  margin-left: 50rpx;
+  width: 36rpx;
+  height: 36rpx;
+}
+.tit{
+  font-size: 30rpx;
+  margin-top: 30rpx;
+}

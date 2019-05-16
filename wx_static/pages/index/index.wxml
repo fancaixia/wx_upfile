@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='downloadbox'>
+      <view wx:if="{{downloadFile.length>0}}">下载到本地的文件列表: </view>
+      <view wx:for="{{downloadFile}}" wx:key="index" wx:for-item="item">
+          <view class='download'><text data-path="{{item.path}}" bindtap='openfile'>{{item.file}}</text> <view data-name="{{item.file}}" data-path="{{item.path}}" bindtap='choosedownfile' class='radio_view'><image src='{{item.sel?"../../img/selected.png":"../../img/default.png"}}'></image></view> </view>
+      </view>
+  </view>
+
+  <view class='martop60'>
+  <text class='default_btn' bindtap='choosefilefun'>选择文件</text>
+  </view>
+  
+      <view wx:for="{{upfilelist}}" wx:key="index" wx:for-item="item">
+            <view class='download' data-path="{{item.path}}">{{item.name}}
+            <view data-name="{{item.name}}" data-path="{{item.path}}" bindtap='delfile' class='radio_view'><image src='../../img/del.png'></image></view>
+            </view>
+      </view>
+    <view class='martop60'>
+    <text class='default_btn' bindtap='upfilefun'>上传</text>
+    </view>
+
+
+</view>
