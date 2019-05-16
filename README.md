@@ -207,3 +207,7 @@ openfile(e){
 
 4. node app.js （启动node服务）
 
+**文件是否上传成功可查看 node/static **
+
+
+
