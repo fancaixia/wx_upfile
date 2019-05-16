@@ -1,5 +1,7 @@
 ### 微信小程序中 word, doc, txt等文件上传与下载
 
+[github项目地址:https://github.com/fancaixia/upfile](https://github.com/fancaixia/upfile)
+
 ##### 文件上传两种方式 
 - [x] 上传当前小程序中下载过的文件
 - [x] 利用wx.chooseMessageFile  调用微信会话页面 选择要上传的文件
