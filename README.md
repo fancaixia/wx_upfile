@@ -12,11 +12,11 @@
 
 **项目启动**  
 
-> wx_static目录为小程序项目
+> wx_static 目录为小程序项目
 
-> node目录为node项目，
-- upload   提供文件下载的目录
-- static   接受文件上传的目录
+> node 目录为node项目，
+- upload   提供文件下载的静态目录
+- static   接收文件上传的目录
 
 
 1. wx_static/config  更改ip地址
