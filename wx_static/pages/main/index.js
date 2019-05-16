@@ -1,7 +1,7 @@
 
+
 const serverAddress = require('../../config')
 Page({
-
   data: {
     defaultfiles:[],       //后台获取的文件列表 
     downloadFile:[],        //下载到本地的文件列表
@@ -25,7 +25,6 @@ Page({
     //读取小程序缓存到本地的文件列表  
     const manager = wx.getFileSystemManager();  //获取全局唯一的文件管理器
     this.getLocalFiles(manager, this)
-
   },
   //读取本地缓存文件
   getLocalFiles(manager, $this) {
@@ -40,11 +39,9 @@ Page({
             path: `${wx.env.USER_DATA_PATH}/download/` + item,
           })
         })
-
         $this.setData({
           downloadFile,
         })
-
       },
       fail: (err) => {
         console.log('本地文件列表读取失败: ')
@@ -58,15 +55,13 @@ Page({
     wx.downloadFile({
       url: serverAddress.url + '/' + fileName,   
       success:(res)=> {
-        // console.log(res, " 下载文件成功");
         var filePath = res.tempFilePath;
         let manager = wx.getFileSystemManager();  //获取全局唯一的文件管理器
-
         //判断目录是否存在
         manager.access({
           path: `${wx.env.USER_DATA_PATH}/download`,
           success: (res) => {
-            console.log('已存在path对应目录',res)
+            // console.log('已存在path对应目录',res)
             //保存文件之前查看是否存在此文件  
             manager.access({
               path: `${wx.env.USER_DATA_PATH}/download/${fileName}`, 
@@ -80,9 +75,7 @@ Page({
                     tempFilePath: filePath,     //filePath为保存到本地的临时路径
                     filePath: `${wx.env.USER_DATA_PATH}/download/${fileName}`,
                     success: (res) => {
-
                       $this.getLocalFiles(manager, $this)
-
                     },
                     fail: (err) => {
                       console.log(err)
@@ -106,35 +99,22 @@ Page({
                     success: (res) => {
                       // console.log(res)
                       $this.getLocalFiles(manager, $this)
-
                     },
                     fail: (err) => {
                       console.log(err)
                     }
                   })
-
                 },
                 fail: (err) => {
                   console.log(err,)
-                },
-                complete: () => {
-                  // console.log("完成",)
                 }
               })
-
             }
         })
-
-
-
       },
       fail:(err)=>{
           console.log(err, "下载失败")
-      },
-      complete:()=>{
-        // console.log('完成')
       }
-    
     })
   },
   openfile(e){
@@ -142,13 +122,12 @@ Page({
       wx.openDocument({
         filePath: path,
         success:(res)=>{
-            console.log('读取成功',res)
+          console.log('读取成功',res)
         },
         fail:(err)=>{
           console.log('读取失败',err)
         }
       })
-
   },
   gotoindex(){
     wx.navigateTo({
@@ -157,3 +136,4 @@ Page({
   }
 
 });
+
