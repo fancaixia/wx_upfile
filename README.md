@@ -1,4 +1,4 @@
-### 微信小程序中 word, doc, txt等文件上传与下载
+### 微信小程序word, doc文件上传与下载
 
 [github项目地址:https://github.com/fancaixia/upfile](https://github.com/fancaixia/upfile)
 
