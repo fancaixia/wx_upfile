@@ -208,8 +208,8 @@ openfile(e){
 
 4. npm run dev
 
-**文件是否上传成功可查看 node/static ** <br/>
-**将想要进行下载的文件丢到  node/upload 小程序下载列表可显示（不显示的话 重启node即可）**
+**文件是否上传成功可查看 node/static 目录** <br/>
+**将想要下载的文件丢到  node/upload, 小程序下载页面可显示（不显示的话 重启node即可）**
 
 
 
