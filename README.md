@@ -13,10 +13,14 @@
 
 ##### 微信会话中选择要上传的上传文件
 ```
-wx.chooseMessageFile({
+//选择要上传的上传文件
+  choosefilefun(){
+    let _that = this;
+    wx.chooseMessageFile({
       count: 10,
       type: 'file',
       success(res) {
+        console.log(_that,' :this')
         // console.log(res, " :res")
         const tempFiles = res.tempFiles
         let {upfilelist} = _that.data;
@@ -27,6 +31,7 @@ wx.chooseMessageFile({
         })
       }
     })
+  },
     
 ```
 ##### 选择当前小程序缓存到本地的文件
