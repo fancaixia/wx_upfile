@@ -195,21 +195,16 @@ openfile(e){
 **项目启动**  
 
 > wx_static 目录为小程序项目
+> node 服务端
 
-> node 目录为node项目，
-- upload   提供文件下载的静态目录
-- static   接收文件上传的目录
-
-
-1. wx_static/config  更改ip地址
-
-2. cd/到node 
+1. cd / node 
 
 3. cnpm install （安装依赖）  
 
-4. node app.js （启动node服务）
+4. npm run dev
 
 **文件是否上传成功可查看 node/static **
+**将想要进行下载的文件丢到  node/upload 小程序下载列表可显示（不显示的话 重启node即可）**
 
 
 
