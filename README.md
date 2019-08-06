@@ -199,8 +199,8 @@ openfile(e){
 
 **项目启动**  
 
-> wx_static 目录为小程序项目
-> node 服务端
+> wx_static 目录为小程序项目 <br/>
+> node 服务端 <br/>
 
 1. cd / node 
 
@@ -208,7 +208,7 @@ openfile(e){
 
 4. npm run dev
 
-**文件是否上传成功可查看 node/static **
+**文件是否上传成功可查看 node/static ** <br/>
 **将想要进行下载的文件丢到  node/upload 小程序下载列表可显示（不显示的话 重启node即可）**
 
 
