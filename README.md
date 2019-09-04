@@ -200,6 +200,10 @@ openfile(e){
 **项目启动**  
 
 > wx_static 目录为小程序项目 <br/>
+cd / wx_static
+1. 修改config.js 中的 ip地址
+
+
 > node 服务端 <br/>
 
 1. cd / node 
