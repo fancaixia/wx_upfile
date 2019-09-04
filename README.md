@@ -206,7 +206,7 @@ openfile(e){
 
 3. cnpm install （安装依赖）  
 
-4. npm run dev
+4. npm run dev( 如果node启动服务失败那么运行 node app)
 
 **文件是否上传成功可查看 node/static 目录** <br/>
 **将想要下载的文件丢到  node/upload, 小程序下载页面可显示（不显示的话 重启node即可）**
