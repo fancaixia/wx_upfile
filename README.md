@@ -202,6 +202,7 @@ openfile(e){
 > wx_static 目录为小程序项目 <br/>
 
 **[1]** cd / wx_static
+
 **[2]** 修改config.js 中的 ip地址
 
 
@@ -211,7 +212,7 @@ openfile(e){
 
 **[2]** cnpm install （安装依赖）  
 
-**[3]** npm run dev( 如果node启动服务失败那么运行 node app)
+**[3]** npm run dev 或 node app
 
 **文件是否上传成功可查看 node/static 目录** <br/>
 **将想要下载的文件丢到  node/upload, 小程序下载页面可显示（不显示的话 重启node即可）**
