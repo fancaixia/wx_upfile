@@ -217,5 +217,10 @@ openfile(e){
 **文件是否上传成功可查看 node/static 目录** <br/>
 **将想要下载的文件丢到  node/upload, 小程序下载页面可显示（不显示的话 重启node即可）**
 
+### 如果这篇文章对你有帮助，请帮忙扫描二维码，或微信搜索小程序(幼教学园)，帮忙点击页面，感谢
+
+![https://github.com/fancaixia/wx_upfile/blob/master/pic/youjiaoxueyuan.png](https://github.com/fancaixia/wx_upfile/blob/master/pic/youjiaoxueyuan.png)
+
+
 
 
