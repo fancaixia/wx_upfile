@@ -8,6 +8,9 @@ Page({
   },
 
   onLoad (query) {
+    
+  },
+  onShow(){
     let $this = this;
     //获取服务器端文件列表
     wx.request({
@@ -25,6 +28,7 @@ Page({
     //读取小程序缓存到本地的文件列表  
     const manager = wx.getFileSystemManager();  //获取全局唯一的文件管理器
     this.getLocalFiles(manager, this)
+
   },
   //读取本地缓存文件
   getLocalFiles(manager, $this) {
