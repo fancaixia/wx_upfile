@@ -10,11 +10,9 @@ var filePath = path.resolve(__dirname, '../static');
 // 监听文件夹改变  
 fs.watchFile(filePath,[{
     persistent :true,
-interval :5007,
+    interval :5007,
 }], function(a1,a2){
-    // console.log(a1,a2)
     fileDisplay(filePath);
-
 })
 
 
