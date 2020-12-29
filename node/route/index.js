@@ -5,13 +5,28 @@ const route_index=express.Router();
 //此处模拟查询数据库所得到的数据    获取upload 目录下的文件返回页面
 var fs = require('fs');
 var path = require('path');//解析需要遍历的文件夹
-var filePath = path.resolve(__dirname, '../upload'); 
+var filePath = path.resolve(__dirname, '../static'); 
+
+// 监听文件夹改变  
+fs.watchFile(filePath,[{
+    persistent :true,
+interval :5007,
+}], function(a1,a2){
+    // console.log(a1,a2)
+    fileDisplay(filePath);
+
+})
+
 
 let filesList=[];   //存储upload目录下的文件
+
 //调用文件遍历方法
 fileDisplay(filePath);
 //文件遍历方法
 function fileDisplay(filePath){
+
+    filesList=[]
+    // console.log(filePath,":filePath")
     //根据文件路径读取文件，返回文件列表
     fs.readdir(filePath,function(err,files){
         if(err){
@@ -32,6 +47,7 @@ function fileDisplay(filePath){
 　　　　　　　　　　　　　　　　// 读取文件名
                             var extname=path.basename(filedir);
                             filesList.push(extname);
+                            // console.log(filesList,":文件夹数据")
                         }
                         if(isDir){
                             fileDisplay(filedir);//递归，如果是文件夹，就继续遍历该文件夹下面的文件
