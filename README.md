@@ -33,36 +33,7 @@
     })
   },
     
-```
-##### 选择当前小程序缓存到本地的文件
-```
-onLoad (query) {
-    const manager = wx.getFileSystemManager();  //获取全局唯一的文件管理器
-    this.getLocalFiles(manager, this)
-  },
-  //读取本地缓存文件
-  getLocalFiles(manager, $this) {
-    manager.readdir({
-      dirPath: `${wx.env.USER_DATA_PATH}/download`,
-      success: (res) => {
-        // console.log('本地文件列表: ', res)
-        let downloadFile = [];
-        res.files.forEach((item, index) => {
-          downloadFile.push({
-            file: item,
-            path: `${wx.env.USER_DATA_PATH}/download/` + item,
-            sel:false,
-          })
-        })
-        $this.setData({
-          downloadFile,
-        })
-      },
-      fail: (err) => {
-        console.log('本地文件列表读取失败: ',err)
-      }
-    })
-  },
+
 ```
 #####  文件上传请求
 ```
@@ -212,8 +183,8 @@ openfile(e){
 
 **[2]** cnpm install （安装依赖）  
 
-**[3]** npm run dev 或 node app
+**[3]** nodemon app
 
-**文件是否上传成功可查看 node/static 目录** <br/>
-**将想要下载的文件丢到  node/upload, 小程序下载页面可显示（不显示的话 重启node即可）**
+**文件上传后 返回下载列表若是不显示，可重新编译小程序** 
+
 
